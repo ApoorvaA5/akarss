@@ -17,6 +17,13 @@ function Products() {
     }
   }, [location]);
 
+  useEffect(() => {
+    const images = document.querySelectorAll(".hover-animate");
+    images.forEach((img) => {
+      img.style.animation = "auto-slide 10s infinite alternate ease-in-out";
+    });
+  }, []);
+
   return (
     <>
       <Banner />

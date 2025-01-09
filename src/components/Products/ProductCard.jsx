@@ -30,9 +30,15 @@ function ProductCard({ product }) {
             </ul>
           </div>
         </div>
+     
         <div className="product-card-img">
-          <img src={product.img} alt={`Akarswift ${product.text}`} />
-        </div>
+  <img src={product.img} alt={`Akarswift ${product.text}`} />
+  <div className="text-overlay">
+    <h4>{product.text}</h4>
+    <p>{product.heading}</p>
+  </div>
+</div>
+
       </div>
       <div className="product-card-features">
         {product.features &&
