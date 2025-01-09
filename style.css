@@ -1,0 +1,3028 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: normal;
+}
+
+@font-face {
+  font-family: "Flexible H1000 W200";
+  src: url("/Fontspring-DEMO-flexible-h1000w200.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  padding: 20px 160px;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 17, 0.5) 0%,
+    rgba(17, 17, 17, 0.5) 100%
+  );
+  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-img {
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  width: 64px;
+  object-fit: cover;
+}
+
+.navbar-name {
+  width: 160px;
+  object-fit: cover;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+}
+
+header nav a {
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #8c4821;
+}
+
+header nav .active-nav-link {
+  color: #f06f22;
+}
+
+header nav .active-nav-link:hover {
+  color: #f06f22;
+}
+
+.orange-button {
+  min-width: 138px;
+  cursor: pointer;
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: var(--Orange-Primary, #c5662e);
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.orange-button:hover {
+  background: var(--Orange-orange-700, #8c4821);
+}
+
+.transparent-button {
+  display: flex;
+  min-width: 148px;
+  cursor: pointer;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #c5662e;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.transparent-button:hover {
+  border: 1px solid var(--Orange-orange-800, #6c3819);
+  background: rgba(83, 43, 19, 0.2);
+}
+
+/* Home */
+
+.home-banner {
+  width: 100%;
+  height: 100svh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  padding: 0px 140px;
+}
+
+.home-banner-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  z-index: 5;
+}
+
+.home-banner-heading-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  position: relative;
+}
+
+.banner-ellipse-1 {
+  position: absolute;
+  width: 200px;
+  object-fit: cover;
+  top: -50px;
+  left: -200px;
+  opacity: 0;
+  animation: rotateCW 2s ease-out forwards;
+}
+
+.banner-ellipse-2 {
+  position: absolute;
+  width: 200px;
+  object-fit: cover;
+  bottom: -50px;
+  right: -200px;
+  opacity: 0;
+  animation: rotateCCW 2s ease-out forwards;
+}
+
+@keyframes rotateCW {
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCCW {
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
+
+.home-banner-heading-container h1 {
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px;
+  background: linear-gradient(91deg, #f8f8f8 80%, #111);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInText 1.5s ease-out 1s forwards;
+  opacity: 0;
+}
+
+.home-banner-heading-container h1 span {
+  background: linear-gradient(102deg, #fbbd99 50%, #121212);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px;
+}
+
+.home-banner-heading-container p {
+  width: 633px;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: linear-gradient(
+    91deg,
+    rgba(248, 248, 248, 0.7) 49.94%,
+    #111 157.65%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInText 1.5s ease-out 1s forwards;
+  opacity: 0;
+}
+
+.home-banner-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: fadeInText 1.5s ease-out 1s forwards;
+  opacity: 0;
+}
+
+.home-banner-globe {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: translateY(100%);
+  animation: slideUpGlobe 1.5s ease-out forwards;
+}
+
+@keyframes slideUpGlobe {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(20%);
+    opacity: 1;
+  }
+}
+
+#banner-globe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+#globe-background {
+  width: 120%;
+  height: 300%;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#globe-background-color {
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(
+    187deg,
+    rgba(197, 102, 46, 0.8) -24.99%,
+    #121212 49.71%
+  );
+  animation: rotateBackground 5s linear infinite;
+}
+
+@keyframes rotateBackground {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.s-banner-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  background: #c5662e;
+  padding: 24px 0px;
+}
+
+.s-banner-marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.s-banner-marquee p {
+  padding: 0px 20px;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+.section {
+  display: flex;
+  width: 100%;
+  padding: 80px 160px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  background: #111;
+}
+
+.section .heading {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.section .heading h2 {
+  color: #fff;
+  text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+  font-family: Urbanist;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.section .heading p {
+  color: #d0d0d0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.commitment-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.commitment-container section {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.commitment-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.commitment-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.commitment-card:hover img {
+  scale: 1.2;
+}
+
+.commitment-card h3 {
+  color: #f8f8f8;
+  font-family: Urbanist;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.commitment-card p {
+  color: rgba(248, 248, 248, 0.7);
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.markets section {
+  gap: 40px;
+}
+
+.markets .commitment-card {
+  gap: 16px;
+}
+
+.markets-card-img {
+  width: 100%;
+  height: 287px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.markets-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mission-vision {
+  width: 100%;
+  min-height: 650px;
+  padding: 80px 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  background: url("/Mission and Vision Background.png") no-repeat center center;
+  background-size: cover;
+}
+
+.about-mission-vision {
+  background: url("/About Page Mission and Vision Background.png") no-repeat
+    center center;
+  background-size: cover;
+}
+
+.mission-vision section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.mission-vision section h2 {
+  color: #fff;
+  font-family: "Flexible H1000 W200", sans-serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 4.8px;
+}
+
+.mission-vision section p {
+  width: 743px;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.mission-vision .vision {
+  align-items: flex-end;
+}
+
+.mission-vision .vision p {
+  text-align: right;
+}
+
+.home-products-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+
+.home-products-left {
+  width: 40%;
+  display: flex;
+  align-self: stretch;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.home-products-left-card {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 24px 20px 40px 20px;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 17, 0.2) 50%,
+    rgba(253, 145, 81, 0.2) 114.53%
+  );
+  transition: all 0.3s;
+}
+
+.home-products-left-card .icon {
+  display: flex;
+  width: 49.197px;
+  height: 47.333px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.home-products-left-card .icon svg {
+  stroke-width: 1px;
+  stroke: #111;
+}
+
+.home-products-left:hover .home-products-left-card {
+  width: 90%;
+  height: 90%;
+}
+
+.home-products-left:hover .home-products-left-card .icon svg path {
+  stroke: #f06f22;
+}
+
+.home-products-left-img {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  overflow: hidden;
+  border-radius: 4px;
+  position: relative;
+}
+
+.home-products-left-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 4px;
+  border-radius: 4px;
+  background: linear-gradient(
+    176deg,
+    rgba(197, 102, 46, 0.02) 46.77%,
+    rgba(17, 17, 17, 0.7) 81.34%
+  );
+  z-index: 1;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
+.home-products-left-img img {
+  width: 100%;
+  max-height: 442px;
+  object-fit: cover;
+  align-self: stretch;
+}
+
+.home-products-left-img p {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  z-index: 2;
+}
+
+.home-products-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.home-products-right .heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.home-products-right .heading h3 {
+  color: #f06f22;
+  font-family: Urbanist;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.home-products-right .heading p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.home-products-right section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.home-products-card {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.home-products-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 4px;
+  border-radius: 4px;
+  background: linear-gradient(
+    179deg,
+    rgba(197, 102, 46, 0.01) 0.44%,
+    rgba(17, 17, 17, 0.7) 56.2%
+  );
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.home-products-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+  z-index: 0;
+}
+
+.home-products-card:hover img {
+  scale: 1.2;
+}
+
+.home-products-card p {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  color: #fff;
+  text-align: right;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 98%;
+  z-index: 2;
+}
+
+.continents-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  gap: 40px;
+}
+
+.continents-map {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.continents-map img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlay-map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.overlay-map.active {
+  opacity: 1;
+}
+
+.continents-info {
+  width: 30%;
+  display: flex;
+  width: 363px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  flex-shrink: 0;
+}
+
+.continents-info .heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.continents-info .heading h3 {
+  color: #f06f22;
+  font-family: Urbanist;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.continents-info .heading p {
+  color: #c7c7c7;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.continents-buttons-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.continents-buttons-container button {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background: #1f1f1f;
+  backdrop-filter: blur(20px);
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.continents-buttons-container button:hover {
+  border-radius: 4px;
+  background: #c5662e;
+  box-shadow: 0px 4px 30px 0px rgba(197, 102, 46, 0.5);
+}
+
+.why-work-with-us {
+  width: 100%;
+  display: flex;
+  padding: 80px 160px;
+  align-items: flex-start;
+  gap: 120px;
+  align-self: stretch;
+  background: #111;
+}
+
+.why-work-with-us-heading {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.why-work-with-us-heading .heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.why-work-with-us-heading .heading section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.why-work-with-us-heading .heading section h2 {
+  width: 100%;
+  color: #fff;
+  text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+  font-family: Urbanist;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.why-work-with-us-heading .heading section p {
+  width: 100%;
+  color: #d0d0d0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.why-work-with-us-heading img {
+object-fit: cover;
+}
+
+.why-work-with-us-container {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.why-work-with-us-card {
+  width: 100%;
+  min-height: 240px;
+  display: flex;
+  padding: 20px 17px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  background: #111;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  background-image: linear-gradient(to bottom, #111, #111),
+    linear-gradient(to top, #f06f22, #111111 3%);
+}
+
+.why-work-with-us-card:hover {
+  background: #f06f22;
+}
+
+.why-work-with-us-card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.why-work-with-us-card .text h3 {
+  color: #f8f8f8;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.why-work-with-us-card .text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.why-work-with-us-card .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.why-work-with-us-card .image img {
+  height: 120px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.why-work-with-us-card .image .main-img {
+  opacity: 1;
+}
+
+.why-work-with-us-card .image .hover-img {
+  position: absolute;
+  opacity: 0;
+}
+
+.why-work-with-us-card:hover .main-img {
+  opacity: 0;
+}
+
+.why-work-with-us-card:hover .hover-img {
+  opacity: 1;
+}
+
+.home-contact {
+  width: 100%;
+  display: flex;
+  padding: 80px 160px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #111;
+}
+
+.home-contact-container {
+  width: 100%;
+  height: 368px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 4px;
+  background: url("/Home Contact Background.png") no-repeat center center;
+  background-size: cover;
+}
+
+.home-contact-container h2 {
+  color: #fff;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.home-contact-container h2 span {
+  background: linear-gradient(91deg, #3a1600 14.4%, #da5200 94.5%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.home-contact-container .transparent-button {
+  background: #111;
+}
+
+.home-contact-container .transparent-button:hover {
+  scale: 1.2;
+}
+
+/* Product Page */
+
+.primary-banner {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.primary-banner-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.primary-banner-object {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 40%;
+  object-fit: cover;
+
+  animation: slideUpObject 1s ease-out forwards;
+}
+
+@keyframes slideUpObject {
+  0% {
+    bottom: -50%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.primary-banner h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px;
+  background: linear-gradient(91deg, #f8f8f8 80%, #111);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fadeInText 1.5s ease-out 1s forwards;
+}
+
+.primary-banner h1 span {
+  background: linear-gradient(102deg, #fbbd99 50%, #121212);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px;
+}
+
+.product-card {
+  width: 100%;
+  display: flex;
+  padding: 80px 160px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  background: #111;
+}
+
+.product-card-text-and-img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+
+.product-card .reverse {
+  flex-direction: row-reverse;
+}
+
+.product-card-text {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.product-card-text h2 {
+  color: #fff;
+  text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+  font-family: Urbanist;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.product-card-text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+}
+
+.product-card-text-container .heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.product-card-text-container .heading h3 {
+  color: #f06f22;
+  font-family: Urbanist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.product-card-text-container .heading p {
+  color: #cdcdcd;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.product-card-text-container ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.product-card-text-container ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.product-card-text-container ul li .line {
+  width: 1px;
+  align-self: stretch;
+  background: linear-gradient(0deg, #111 0%, #f06f22 47%, #111 100%);
+  box-shadow: 0px 4px 10px 0px #f06f22;
+}
+
+.product-card-text-container ul li .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.product-card-text-container ul li .text h4 {
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.product-card-text-container ul li .text p {
+  color: #cdcdcd;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.product-card-img {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+}
+
+.product-card-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 637px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.product-card-features {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+}
+
+.product-card-features-card {
+  grid-column: span 2;
+  display: flex;
+  width: 100%;
+  height: 143px;
+  padding: 32px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  background: #111;
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  background-image: linear-gradient(to bottom, #111, #111),
+    /* Inner background */ linear-gradient(to top, #c5662e66, #111111); /* Border gradient */
+  box-shadow: 0px 4px 40px 0px rgba(240, 111, 34, 0.13);
+}
+
+.product-card-features-card h4 {
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+.product-card-features-card p {
+  color: #cdcdcd;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+.product-card-features-card:nth-child(3n + 4):last-child {
+  grid-column: 3 / span 2;
+}
+
+.product-card-features:has(:nth-child(3n + 5):last-child) > :nth-last-child(2) {
+  grid-column: 2 / span 2;
+}
+
+/* Services */
+
+.services-container {
+  display: flex;
+  width: 100%;
+  padding: 80px 160px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  background: #111;
+}
+
+.services-container .reverse {
+  flex-direction: row-reverse;
+}
+
+.services-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+
+.services-card-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.services-card-text h2 {
+  color: #fff;
+  text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+  font-family: Urbanist;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.services-card-text h2 span {
+  color: #f06f22;
+}
+
+.services-card-text p {
+  color: #cdcdcd;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.services-card-img {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-card-img img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.careers-container {
+  width: 100%;
+  display: flex;
+  padding: 80px 160px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+  background: #111;
+}
+
+.careers-container h2 {
+  color: #fff;
+  text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+  font-family: Urbanist;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.careers-container h2 span {
+  color: #f06f22;
+}
+
+.careers-card {
+  display: flex;
+  width: 100%;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  border-radius: 8px;
+  background: #111;
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  background-image: linear-gradient(to bottom, #111, #111),
+    linear-gradient(to right, #f06f22, #111111 30%);
+}
+
+.careers-card-heading {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.careers-card .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+}
+
+.careers-card .heading h3 {
+  color: #f8f8f8;
+  font-family: Urbanist;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.careers-card .heading p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.careers-card-container {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.careers-card-container h4 {
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.careers-card-info-and-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.careers-card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.careers-card-info-set {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.careers-card-info-set span {
+  min-width: 120px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.careers-card-info ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 20px;
+  gap: 4px;
+}
+
+.careers-card-info ul li {
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.careers-card-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.careers-card-form .transparent-button {
+  width: 100%;
+}
+
+/* Contact */
+
+.secondary-banner {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.secondary-banner .background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 100%;
+  animation: slideBackground 1.5s ease-out forwards;
+}
+
+@keyframes slideBackground {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.secondary-banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px;
+  background: linear-gradient(91deg, #f8f8f8 80%, #111);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fadeInText 1.5s ease-out 1s forwards;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.secondary-banner h1 span {
+  background: linear-gradient(102deg, #fbbd99 50%, #121212);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px;
+}
+
+.banner-down-line1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: lineDown1 1.2s ease-out forwards;
+}
+
+@keyframes lineDown1 {
+  from {
+    transform: translate(calc(-50% - 250px), calc(-50% - 350px));
+    opacity: 0;
+  }
+  to {
+    transform: translate(calc(-50% - 250px), calc(-50% - 150px));
+    opacity: 1;
+  }
+}
+
+.banner-down-line2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: lineDown2 1.2s ease-out forwards;
+}
+
+@keyframes lineDown2 {
+  from {
+    transform: translate(calc(-50% + 250px), calc(-50% - 350px));
+    opacity: 0;
+  }
+  to {
+    transform: translate(calc(-50% + 250px), calc(-50% - 150px));
+    opacity: 1;
+  }
+}
+
+.banner-left-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: lineLeft 1.2s ease-out forwards;
+}
+
+@keyframes lineLeft {
+  from {
+    transform: translate(calc(-50% - 650px), calc(-50%));
+    opacity: 0;
+  }
+  to {
+    transform: translate(calc(-50% - 450px), calc(-50%));
+    opacity: 1;
+  }
+}
+
+.banner-right-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: lineRight 1.2s ease-out forwards;
+}
+
+@keyframes lineRight {
+  from {
+    transform: translate(calc(-50% + 650px), calc(-50%));
+
+    opacity: 0;
+  }
+  to {
+    transform: translate(calc(-50% + 450px), calc(-50%));
+    opacity: 1;
+  }
+}
+
+.banner-down-line1,
+.banner-down-line2,
+.banner-left-line,
+.banner-right-line {
+  opacity: 0;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  padding: 60px 320px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  background: #111;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.form-input-divider {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 40px;
+}
+
+.form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+}
+
+.form-input label {
+  color: #c1c1c1;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+
+.form-input label span {
+  color: #f06f22;
+}
+
+.form-input input {
+  width: 100%;
+  display: flex;
+  height: 48px;
+  padding: 8px 16px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #8a8a8a;
+  background: #111;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+.form-input textarea {
+  width: 100%;
+  min-height: 200px;
+  resize: none;
+  display: flex;
+  height: 48px;
+  padding: 8px 16px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #8a8a8a;
+  background: #111;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+form button {
+  width: 100%;
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 0;
+  background: var(--Orange-Primary, #c5662e);
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--Orange-orange-700, #8c4821);
+}
+
+.contact-info {
+  width: 100%;
+  display: flex;
+  padding: 80px 240px;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+}
+
+.contact-info-set {
+  display: flex;
+  width: 268px;
+  padding: 24px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid rgba(240, 111, 34, 0.2);
+  background: #111;
+  box-shadow: 0px 4px 40px 0px rgba(240, 111, 34, 0.13);
+}
+
+.contact-info-set-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-info-set-icon {
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-radius: 4px;
+  border: 0.4px solid #f06f22;
+}
+
+.contact-info-set-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.contact-info-set-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.contact-info-set-info h3 {
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.contact-info-set-info p {
+  color: #c6c6c6;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+.contact-info-set-button {
+  display: flex;
+  width: 100%;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #c5662e;
+  color: #c6c6c6;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.contact-info-set-button:hover {
+  border: 1px solid var(--Orange-orange-800, #6c3819);
+  background: rgba(83, 43, 19, 0.2);
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  width: 100%;
+  padding: 80px 160px 40px 160px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  background: #121212;
+}
+
+.footer-up {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  align-self: stretch;
+}
+
+.footer-up .footer-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 17, 0.2) 5.5%,
+    rgba(197, 102, 46, 0.2) 54.5%,
+    rgba(17, 17, 17, 0.2) 100%
+  );
+}
+
+.footer-up-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.footer-up-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer-up-left section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 64px;
+  object-fit: cover;
+}
+
+.footer-name {
+  width: 160px;
+  object-fit: cover;
+}
+
+.footer-up-left p {
+  width: 340px;
+  color: #f8f8f8;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.footer-up-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  align-self: stretch;
+}
+
+.footer-links-internal {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.footer-links-internal section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-links-internal section a {
+  text-decoration: none;
+  color: #cdcdcd;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.footer-links-internal section a:hover {
+  color: #fff;
+}
+
+.footer-links-external {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-links-external a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.footer-links-external a img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.footer-links-external a p {
+  color: #cdcdcd;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.3s;
+}
+
+.footer-links-external a:hover img {
+  scale: 1.1;
+}
+
+.footer-links-external a:hover p {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.footer-down {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.footer-down .footer-line {
+  width: 100%;
+  height: 1px;
+  opacity: 0.2;
+  background: #7bb9fc;
+}
+
+.footer-down-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.footer-down-container p {
+  color: rgba(248, 248, 248, 0.5);
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-socials a img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.footer-socials a:hover img {
+  scale: 1.2;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+  .mobile {
+    display: flex;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    background: #121212;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  }
+
+  .navbar-logo {
+    width: 40px;
+  }
+
+  .navbar-name {
+    width: 108px;
+  }
+
+  .mobile-navbar-button {
+    display: flex;
+    padding: 6px;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .mobile-navbar-button svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .mobileNavbar {
+    width: 100%;
+    height: calc(100svh - 56px);
+    background: #111;
+    position: fixed;
+    top: 56px;
+    right: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 40px 20px 20px 20px;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  .activeMobileNavbar {
+    transform: translateX(0);
+    animation: slideIn 0.3s forwards;
+  }
+
+  .nonactiveMobileNavbar {
+    transform: translateX(100%);
+    animation: slideOut 0.3s forwards;
+  }
+
+  .mobileNavbar nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .mobileNavbar nav a {
+    color: #fff;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .mobileNavbar nav .active-nav-link {
+    color: #f06f22;
+  }
+
+  .mobileNavbar .orange-button {
+    width: 100%;
+  }
+
+  /* Home */
+
+  .home-banner {
+    padding: 0;
+  }
+
+  .home-banner-heading-container h1 {
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .home-banner-heading-container h1 span {
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .home-banner-heading-container p {
+    width: 100%;
+    padding: 0px 40px;
+  }
+
+  .banner-ellipse-1 {
+    width: 112px;
+    top: -30px;
+    left: 25px;
+    z-index: -1;
+  }
+
+  .banner-ellipse-2 {
+    width: 112px;
+    bottom: -30px;
+    right: 25px;
+    z-index: -1;
+  }
+
+  .home-banner-globe {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  #banner-globe {
+    height: auto;
+  }
+
+  #globe-background {
+    width: 100%;
+    aspect-ratio: 1/1;
+    height: auto;
+    top: 30%;
+  }
+
+  .s-banner-wrapper {
+    padding: 12px 0px;
+  }
+
+  .s-banner-marquee p {
+    color: #fff;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.32px;
+  }
+
+  .s-banner-marquee img {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
+  .section {
+    display: flex;
+    padding: 48px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .section .heading h2 {
+    color: #fff;
+    text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .section .heading p {
+    color: #d0d0d0;
+    font-family: Urbanist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .commitment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .commitment-container section {
+    flex-direction: column;
+  }
+
+  .commitment-card img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .commitment-card h3 {
+    color: #f8f8f8;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .commitment-card p {
+    color: rgba(248, 248, 248, 0.7);
+    font-family: Urbanist;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .markets section {
+    gap: 24px;
+  }
+
+  .markets-card-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mission-vision {
+    min-height: auto;
+    padding: 128px 20px;
+    background: url("/Mobile Mission and Vision Background.png") no-repeat
+      center center;
+    background-size: cover;
+  }
+
+  .mission-vision section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .mission-vision section h2 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.88px;
+  }
+
+  .mission-vision section p {
+    width: 100%;
+    color: #fff;
+    font-family: Urbanist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .home-products-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .home-products-left {
+    width: 100%;
+  }
+
+  .home-products-right {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .home-products-left-img img {
+    height: 319px;
+  }
+
+  .home-products-right .heading h3 {
+    color: #f06f22;
+    font-family: Urbanist;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .home-products-right .heading p {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .home-products-right section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .continents-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    align-self: stretch;
+  }
+
+  .continents-map {
+    width: 100%;
+  }
+
+  .continents-info {
+    width: 100%;
+  }
+
+  .continents-info .heading h3 {
+    color: #f06f22;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .continents-info .heading p {
+    color: #c7c7c7;
+    font-family: Urbanist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .why-work-with-us {
+    display: flex;
+    padding: 48px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .why-work-with-us-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+    align-self: stretch;
+  }
+
+  .why-work-with-us-heading .heading section h2 {
+    color: #fff;
+    text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .why-work-with-us-heading .heading section p {
+    color: #d0d0d0;
+    font-family: Urbanist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+   .why-work-with-us-heading img{
+    width: 120px;
+    height: 120px;
+    object-fit: none;
+   }
+
+  .why-work-with-us-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .why-work-with-us-card {
+    display: flex;
+    min-height: 175px;
+    padding: 20px 17px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+
+  .home-contact {
+    display: flex;
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .home-contact-container h2 {
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .home-contact-container h2 span {
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  /* Products */
+
+  .primary-banner-object {
+    width: 100%;
+    height: auto;
+  }
+
+  .primary-banner h1 {
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .primary-banner h1 span {
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .product-card {
+    display: flex;
+    padding: 48px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .product-card .reverse {
+    flex-direction: column;
+  }
+
+  .product-card-text-and-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+  }
+
+  .product-card-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+  }
+
+  .product-card-text h2 {
+    color: #fff;
+    text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .product-card-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .product-card-img {
+    width: 100%;
+    height: 270px;
+  }
+
+  .product-card-img img {
+    width: 100%;
+    height: 270px;
+    min-height: auto;
+  }
+
+  .product-card-features {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+  }
+
+  .product-card-features-card {
+    display: flex;
+    height: 143px;
+    padding: 32px 4px 32px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+  }
+
+  /* Services */
+
+  .services-container {
+    display: flex;
+    padding: 48px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .services-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .services-container .reverse {
+    flex-direction: column;
+  }
+
+  .services-card-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .services-card-text h2 {
+    color: #fff;
+    text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .services-card-text p {
+    color: #cdcdcd;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .services-card-img {
+    width: 100%;
+    height: 320px;
+  }
+
+  .services-card-img img {
+    width: 100%;
+    height: 320px;
+  }
+
+  /* Careers */
+
+  .careers-container {
+    display: flex;
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .careers-container h2 {
+    color: #fff;
+    text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 8px;
+  }
+
+  .careers-card-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .careers-card .heading h3 {
+    color: #f8f8f8;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .careers-card .heading p {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .careers-card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .careers-card-container h4 {
+    color: #fff;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .careers-card-info-set {
+    color: #fff;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .careers-card-info-set span {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: Urbanist;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  /* Contact */
+
+  .secondary-banner h1 {
+    width: 100%;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .secondary-banner h1 span {
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .banner-down-line1 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    animation: lineDown1 1.2s ease-out forwards;
+  }
+
+  @keyframes lineDown1 {
+    from {
+      transform: translateY(calc(-50% - 350px));
+      opacity: 0;
+    }
+    to {
+      transform: translateY(calc(-50% - 120px));
+      opacity: 1;
+    }
+  }
+
+  .banner-down-line2 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    animation: lineDown2 1.2s ease-out forwards;
+  }
+
+  @keyframes lineDown2 {
+    from {
+      transform: translateY(calc(-50% - 350px));
+      opacity: 0;
+    }
+    to {
+      transform: translateY(calc(-50% - 120px));
+      opacity: 1;
+    }
+  }
+
+  .banner-left-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: lineLeft 1.2s ease-out forwards;
+  }
+
+  @keyframes lineLeft {
+    from {
+      transform: translate(calc(-50% - 650px), calc(-50% - 20px));
+      opacity: 0;
+    }
+    to {
+      transform: translate(calc(-50% - 150px), calc(-50% - 20px));
+      opacity: 1;
+    }
+  }
+
+  .banner-right-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: lineRight 1.2s ease-out forwards;
+  }
+
+  @keyframes lineRight {
+    from {
+      transform: translate(calc(-50% + 650px), calc(-50% - 20px));
+
+      opacity: 0;
+    }
+    to {
+      transform: translate(calc(-50% + 150px), calc(-50% - 20px));
+      opacity: 1;
+    }
+  }
+
+  form {
+    display: flex;
+    padding: 48px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .contact-info {
+    display: flex;
+    padding: 48px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .contact-info-set {
+    width: 100%;
+  }
+
+  /* Footer */
+
+  footer {
+    display: flex;
+    padding: 48px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .footer-up {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .footer-up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .footer-up-left p {
+    width: 100%;
+  }
+
+  .footer-up-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .footer-links-internal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .footer-down-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
+}
