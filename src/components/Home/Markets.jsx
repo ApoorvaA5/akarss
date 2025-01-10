@@ -1,8 +1,8 @@
 import React from "react";
 import ProductImg1 from "../../assets/Home/Markets/Comprehensive Trade Solutions.png";
-import ProductImg2 from "../../assets/Home/Markets/Import Services.png";
+import ProductImg2 from "../../assets/Home/Markets/Import Services.jpg";
 import ProductImg3 from "../../assets/Home/Markets/Export Services.png";
-import ProductImg4 from "../../assets/Home/Markets/Customs Brokerage.png";
+import ProductImg4 from "../../assets/Home/Markets/Customs Brokerage.jpg";
 import ProductImg5 from "../../assets/Home/Markets/Supply Chain Management.png";
 import ProductImg6 from "../../assets/Home/Markets/Logistics and Transportation.png";
 
@@ -109,3 +109,5 @@ function Markets() {
 }
 
 export default Markets;
+
+
