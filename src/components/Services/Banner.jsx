@@ -1,6 +1,7 @@
 import React from "react";
 import Background from "../../assets/Services/Banner Background.png";
 import ObjectImg from "../../assets/Services/Banner Object.png";
+import './Services.css';
 
 function Banner() {
   return (

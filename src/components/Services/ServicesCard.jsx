@@ -1,5 +1,4 @@
 import React from "react";
-import ComprehensiveTradeSolutions from "../../assets/Services/Comprehensive Trade Solutions.png";
 
 function ServicesCard(props) {
   return (
@@ -9,10 +8,18 @@ function ServicesCard(props) {
         <p>{props.paragraph}</p>
       </div>
       <div className="services-card-img">
-        <img src={props.imgSrc} alt="Akarswift Services Img" />
+        <div className="img-container">
+          <img src={props.imgSrc} alt="Akarswift Services Img" />
+          <div className="img-overlay">
+            <span className="img-text">Explore Our Services</span>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
 
 export default ServicesCard;
+
+
+
