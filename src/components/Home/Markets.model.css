@@ -24,7 +24,7 @@
   .section.markets img {
     opacity: 0; /* Start as invisible */
     animation: fadeInOut 12s ease-in-out infinite; /* Auto appear every 5 seconds */
-    animation-delay: 0.3s; /* Delay to stagger the image and text animations */
+    animation-delay: 0.2s; /* Delay to stagger the image and text animations */
     display: block;
     margin: 0 auto; /* Center align the images */
   }
