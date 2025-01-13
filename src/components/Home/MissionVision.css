@@ -24,7 +24,7 @@
   letter-spacing: 2px;
   margin-bottom: 10px;
   opacity: 0; /* Start with hidden text */
-  animation: fadeInUp 1.5s ease-in-out forwards, scaleUp 1s ease-in-out 0.5s forwards, repeatAnimations 3s infinite;
+  animation: fadeInUp 1.5s ease-in-out forwards, scaleUp 1s ease-in-out 0.5s forwards, transparentShadow 2s ease-in-out 0.5s forwards, repeatAnimations 3s infinite;
   animation-fill-mode: forwards; /* Ensure the styles are retained after animation */
 }
 
@@ -36,7 +36,7 @@
   font-weight: 300; /* Lighter font weight */
   opacity: 0; /* Start with hidden text */
   transform: translateY(20px); /* Initial off-position */
-  animation: fadeInUp 1.5s ease-in-out forwards, slideIn 2s ease-in-out 0.5s forwards, shadowEffect 2s ease-in-out 0.5s forwards, repeatAnimations 3s infinite;
+  animation: fadeInUp 1.5s ease-in-out forwards, slideIn 2s ease-in-out 0.5s forwards, transparentShadow 2s ease-in-out 0.5s forwards, repeatAnimations 3s infinite;
   animation-fill-mode: forwards;
 }
 
@@ -84,29 +84,16 @@
   }
 }
 
-/* Animating text color change */
-@keyframes colorChange {
+/* Transparent black shadow animation for text */
+@keyframes transparentShadow {
   0% {
-    color: #555;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
   }
   50% {
-    color: #333;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2);
   }
   100% {
-    color: #111;
-  }
-}
-
-/* Box shadow animation for paragraph */
-@keyframes shadowEffect {
-  0% {
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  50% {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.3);
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -136,6 +123,7 @@
     font-size: 1rem;
   }
 }
+
 
   
   

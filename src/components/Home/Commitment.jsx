@@ -1,6 +1,7 @@
 import React from "react";
 import RecycleIcon from "../../assets/Home/Recycle Icon.png";
 import LogisticsIcon from "../../assets/Home/Logistics Icon.png";
+import './Commitmet.model.css'
 
 function Commitment() {
   return (
