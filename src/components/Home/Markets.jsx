@@ -5,6 +5,7 @@ import ProductImg3 from "../../assets/Home/Markets/Export Services.png";
 import ProductImg4 from "../../assets/Home/Markets/Customs Brokerage.jpg";
 import ProductImg5 from "../../assets/Home/Markets/Supply Chain Management.png";
 import ProductImg6 from "../../assets/Home/Markets/Logistics and Transportation.png";
+import "./Markets.model.css";
 
 function Markets() {
   return (

@@ -1,0 +1,32 @@
+
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: scale(0.9); /* Slightly shrink at the start */
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1); /* Full size and fully visible */
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.9); /* Shrink back at the end */
+    }
+  }
+  
+  .section.markets p {
+    color: #fc6f10;
+    opacity: 0; /* Start as invisible */
+    animation: fadeInOut 5s ease-in-out infinite; /* Auto appear every 5 seconds */
+  }
+  
+  .section.markets img {
+    opacity: 0; /* Start as invisible */
+    animation: fadeInOut 12s ease-in-out infinite; /* Auto appear every 5 seconds */
+    animation-delay: 0.3s; /* Delay to stagger the image and text animations */
+    display: block;
+    margin: 0 auto; /* Center align the images */
+  }
+  
+  
