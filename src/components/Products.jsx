@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Banner from "./Products/Banner";
 import ProductCard from "./Products/ProductCard";
-import { productsData } from "./Products/data";
+import { productsData } from "./Products/data.jsx";
 import Contact from "./Home/Contact";
 
 function Products() {
