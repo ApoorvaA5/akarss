@@ -1,3 +1,34 @@
+@keyframes fadeInOut {
+  0%, 20% {
+    opacity: 0; /* Hidden */
+    transform: translateY(20px); /* Slight downward movement */
+  }
+  30%, 80% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Original position */
+  }
+  100% {
+    opacity: 0; /* Hidden again */
+    transform: translateY(20px); /* Back to downward movement */
+  }
+}
+
+.product-card-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust alignment */
+}
+
+.product-card-features-card {
+  animation: fadeInOut 4s infinite ease-in-out; /* 3 seconds, repeating infinitely */
+  flex: 1 1 30%; /* Adjust size and spacing, if needed */
+  opacity: 0; /* Initial state is hidden */
+  text-align: center; /* Align text to center */
+}
+
+
+
+
 .product-card-img {
     position: relative; /* Allows positioning child elements */
     width: 50%; /* Adjust the image size */
@@ -32,3 +63,6 @@
     opacity: 1; 
     transform: translateY(0);/* Make text visible */
   }
+ 
+  
+  

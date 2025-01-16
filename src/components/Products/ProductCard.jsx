@@ -41,15 +41,19 @@ function ProductCard({ product }) {
 
       </div>
       <div className="product-card-features">
-        {product.features &&
-          product.features.length > 0 &&
-          product.features.map((feature, index) => (
-            <div key={index} className="product-card-features-card">
-              <h4>{feature.title}</h4>
-              <p>{feature.text}</p>
-            </div>
-          ))}
+  {product.features &&
+    product.features.length > 0 &&
+    product.features.map((feature, index) => (
+      <div key={index} className="product-card-features-card">
+        <h4>{feature.title}</h4>
+        <p>{feature.text}</p>
       </div>
+    ))}
+</div>
+   
+   
+
+
     </div>
   );
 }

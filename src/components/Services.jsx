@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "./Services/Banner";
 import ServicesCard from "./Services/ServicesCard";
-import { servicesData } from "./Services/data";
+import { servicesData } from "./Services/data.jsx";
 
 function Services() {
   return (
